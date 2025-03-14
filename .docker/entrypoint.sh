@@ -17,4 +17,8 @@ if [ ! -z "$CONFIG" ]; then
     args+=(--config $CONFIG)
 fi
 
+if [ ! -z "$LOG" ]; then
+    args+=(--log $LOG)
+fi
+
 nx584_server --listen $LISTEN "${args[@]}"
